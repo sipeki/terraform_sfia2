@@ -8,16 +8,6 @@ variable "ami_id" {
   default     = "ami-07ee42ba0209b6d77"
 }
 
-variable "instance_count" {
-  description = "Create 2 instance"
-  default = "2"
-}
-
-variable "instance_tags" {
-  type    = list
-  default = ["Manager", "Worker"]
-}
-
 variable "key_name" {
   description = "This variable states the key name for your EC2"
   default     = "simon"
@@ -28,21 +18,18 @@ variable "subnet_id" {
 
 }
 
-variable "sg_ids" {
-  description = "security group ID for EC2"
-
-}
-
 variable "name" {
   description = "Name of EC2 instance "
-  default = "EC2200820"
+  default = "SFIA2"
 }
 
-
-
 variable "enable_public_ip" {
-  de
+  description = "Enable if EC2 instace should have public ip address"
+  default = true
+}
 
+variable "vpc_security_group_ids" {
+  description = "VPC Security Group IDs"
 }
 
 variable "user_data" {

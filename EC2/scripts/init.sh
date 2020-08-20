@@ -2,4 +2,4 @@
 
 sudo apt update -y
 
-touch ~/sipeki.txt
+touch sipeki.txt

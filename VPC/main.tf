@@ -3,7 +3,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "VPC200820"
+    Name = "SFIA2"
   }
 
 }
@@ -18,7 +18,7 @@ resource "aws_subnet" "subnet_a" {
   availability_zone = data.aws_availability_zones.available.names[0]
 
   tags = {
-    Name = "Subnet for VPC200820"
+    Name = "SFIA Subnet A"
 
   }
 
@@ -28,7 +28,7 @@ resource "aws_internet_gateway" "vpc_igw" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    Name = "VPC GW"
+    Name = "VPC IGW SFIA2"
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_route_table" "vpc_rt" {
   }
 
   tags = {
-    Name = "RT for VPC200820"
+    Name = "RT for SFIA2"
   }
 }
 

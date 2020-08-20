@@ -1,22 +1,20 @@
-variable "sg_web_name" {
+variable "sg_sfia2_name" {
   default = "DefaultSGWeb"
 }
 
-variable "sg_web_description" {
+variable "sg_sfia2_description" {
   default = "Allow SSH"
 }
 
 variable "open_internet" {
-  default = "0.0.0.0/0"
+  default = ["0.0.0.0/0"]
 }
 
-variable "ingress_ports_manager" {
-  type        = list(number)
-  description = "List of ingress ports"
-  default     = [22,8080,80]
+variable "ip_addresses" {
+  default = ["0.0.0.0/0"]
 }
 
-variable "ingress_ports_worker" {
+variable "ingress_ports" {
   type        = list(number)
   description = "List of ingress ports"
   default     = [22]
