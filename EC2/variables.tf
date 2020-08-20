@@ -20,12 +20,12 @@ variable "subnet_id" {
 
 variable "name" {
   description = "Name of EC2 instance "
-  default = "SFIA2"
+  default     = "SFIA2"
 }
 
 variable "enable_public_ip" {
   description = "Enable if EC2 instace should have public ip address"
-  default = true
+  default     = true
 }
 
 variable "vpc_security_group_ids" {
