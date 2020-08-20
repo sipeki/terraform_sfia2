@@ -1,5 +1,5 @@
 resource "aws_instance" "docker" {
-  count = "${var.instance_count}"
+  count = var.instance_count
   ami                         = var.ami_id
   instance_type               = var.instance
   key_name                    = var.key_name
