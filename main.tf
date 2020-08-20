@@ -13,7 +13,7 @@ module "sfia2_vpc" {
 module "sg_manager_myip" {
   sg_sfia2_name = "Manager SG For My IP"
   source = "./SG"
-  ip_addresses = ["54.246.41.51/32"]
+  ip_addresses = ["81.147.135.237/32"]
   ingress_ports = [22, 8080]
   vpc_id = module.sfia2_vpc.vpc_id
 }
@@ -28,7 +28,7 @@ module "sg_manager_open" {
 module "sg_worker_myip" {
   sg_sfia2_name = "Worker SG For My IP"
   source = "./SG"
-  ip_addresses = ["54.246.41.51/32"]
+  ip_addresses = ["81.147.135.237/32"]
   vpc_id = module.sfia2_vpc.vpc_id
 }
 
