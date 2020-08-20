@@ -1,4 +1,5 @@
-resource "aws_instance" "web" {
+resource "aws_instance" "docker" {
+  count = "${var.instance_count}"
   ami                         = var.ami_id
   instance_type               = var.instance
   key_name                    = var.key_name
@@ -8,7 +9,7 @@ resource "aws_instance" "web" {
 
   tags = {
 
-    name = "${element(var.instance_tags, count.index)}"
+    name  = "${element(var.instance_tags, count.index)}"
     batch = "sfia2"
 
   }

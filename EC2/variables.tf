@@ -9,11 +9,12 @@ variable "ami_id" {
 }
 
 variable "instance_count" {
+  description = "Create 2 instance"
   default = "2"
 }
 
 variable "instance_tags" {
-  type = "list"
+  type    = list
   default = ["Docker_Manager", "Docker_Worker"]
 }
 
