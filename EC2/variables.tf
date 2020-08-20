@@ -8,6 +8,15 @@ variable "ami_id" {
   default     = "ami-07ee42ba0209b6d77"
 }
 
+variable "instance_count" {
+  default = "2"
+}
+
+variable "instance_tags" {
+  type = "list"
+  default = ["Docker_Manager", "Docker_Worker"]
+}
+
 variable "key_name" {
   description = "This variable states the key name for your EC2"
   default     = "simon"

@@ -8,7 +8,8 @@ resource "aws_instance" "web" {
 
   tags = {
 
-    name = "EC2 for VPC200820"
+    name = "${element(var.instance_tags, count.index)}"
+    batch = "sfia2"
 
   }
 }
