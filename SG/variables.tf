@@ -10,7 +10,13 @@ variable "open_internet" {
   default = "0.0.0.0/0"
 }
 
-variable "ingress_ports" {
+variable "ingress_ports_manager" {
+  type        = list(number)
+  description = "List of ingress ports"
+  default     = [22,8080,80]
+}
+
+variable "ingress_ports_worker" {
   type        = list(number)
   description = "List of ingress ports"
   default     = [22]

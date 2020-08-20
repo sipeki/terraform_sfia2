@@ -15,7 +15,7 @@ variable "instance_count" {
 
 variable "instance_tags" {
   type    = list
-  default = ["Docker_Manager", "Docker_Worker"]
+  default = ["Manager", "Worker"]
 }
 
 variable "key_name" {
@@ -30,5 +30,22 @@ variable "subnet_id" {
 
 variable "sg_ids" {
   description = "security group ID for EC2"
+
+}
+
+variable "name" {
+  description = "Name of EC2 instance "
+  default = "EC2200820"
+}
+
+
+
+variable "enable_public_ip" {
+  de
+
+}
+
+variable "user_data" {
+  description = "Script "
 
 }
