@@ -8,8 +8,8 @@ resource "aws_instance" "sfia2" {
   user_data                   = var.user_data
   tags = {
 
-    name  = var.name
-    batch = "sfia2"
+    Name  = var.name
+    Batch = "docker sfia2"
 
   }
 }

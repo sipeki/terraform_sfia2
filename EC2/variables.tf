@@ -19,8 +19,8 @@ variable "subnet_id" {
 }
 
 variable "name" {
-  description = "Name of EC2 instance "
-  default     = "SFIA2"
+  description = "Name of EC2 Instance"
+  default = "sfia2"
 }
 
 variable "enable_public_ip" {
